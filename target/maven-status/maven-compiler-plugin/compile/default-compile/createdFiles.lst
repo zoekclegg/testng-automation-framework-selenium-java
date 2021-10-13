@@ -1,0 +1,4 @@
+pages\SimpleFormDemoPage.class
+pages\DemoHomePage.class
+pages\HomePage.class
+resources\ExtentReporterNG.class
