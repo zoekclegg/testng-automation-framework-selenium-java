@@ -35,6 +35,12 @@ public class DemoHomePage {
     @FindBy(linkText="Ajax Form Submit")
     WebElement ajaxFormSubmitLink;
 
+    @FindBy(xpath="//a[contains(text(),'Date pickers') and @class='dropdown-toggle']")
+    WebElement datePickersDropdown;
+
+    @FindBy(linkText="Bootstrap Date Picker")
+    WebElement bootstrapDataPickerLink;
+
 
     public void waitForPopUp(){
         WebDriverWait wait= new WebDriverWait(driver,10);
@@ -68,6 +74,11 @@ public class DemoHomePage {
     public void clickAjaxFormSubmitLink() {
         inputFormsDropdown.click();
         ajaxFormSubmitLink.click();
+    }
+
+    public void clickBootstrapDatePickerLink() {
+        datePickersDropdown.click();
+        bootstrapDataPickerLink.click();
     }
 
 }

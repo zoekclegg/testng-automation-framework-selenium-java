@@ -1,17 +1,14 @@
 package tests;
 
 import base.baseTests;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.DemoHomePage;
-import pages.*;
+import pages.inputForms.SelectDropdownListPage;
 
 public class selectDropdownListTests extends baseTests {
-
-    //ExtentTest test;
 
     @BeforeMethod
     public void openRadioButtonsDemoPage(){
@@ -30,8 +27,6 @@ public class selectDropdownListTests extends baseTests {
         test.log(Status.PASS, "'Selected Day' text verified");
     }
 
-    //////////////////////////////
-
     @Test
     public void verifyCanSelectAnOption(){
         SelectDropdownListPage selectDropdownListPage = new SelectDropdownListPage (driver);
@@ -49,7 +44,6 @@ public class selectDropdownListTests extends baseTests {
         SelectDropdownListPage selectDropdownListPage = new SelectDropdownListPage(driver);
         int randOption = utils.randomInt(0, selectDropdownListPage.getNumberOfMultiOptions()-1);
         String value = selectDropdownListPage.getListOfValues().get(randOption);
-        //selectDropdownListPage.selectMultiOptionByValue(value);
         selectDropdownListPage.clickMultiOptionByValue(value);
         test.log(Status.PASS, "First option selected");
         int randOption2 = randOption;
@@ -57,7 +51,6 @@ public class selectDropdownListTests extends baseTests {
             randOption2 = utils.randomInt(0, selectDropdownListPage.getNumberOfMultiOptions()-1);
         }
         String value2 = selectDropdownListPage.getListOfValues().get(randOption2);
-        //selectDropdownListPage.selectMultiOptionByValue(value2);
         selectDropdownListPage.clickMultiOptionByValue(value2);
         test.log(Status.PASS, "Second option selected");
         Assert.assertEquals(selectDropdownListPage.getAllSelectedOptions().size(),2,"2 options aren't selected");

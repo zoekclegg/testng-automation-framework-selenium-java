@@ -10,7 +10,6 @@ public class ExtentReporterNG {
 
     static public ExtentReports extent;
     public static ExtentReports getReportObject() {
-        System.out.println(System.getProperty("user.dir"));
         String fileName = new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
         String path = System.getProperty("user.dir")+"/reports/"+ fileName+".html";
         ExtentSparkReporter reporter = new ExtentSparkReporter(path);
