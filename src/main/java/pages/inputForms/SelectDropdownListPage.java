@@ -58,8 +58,6 @@ public class SelectDropdownListPage {
         return dayDropdown.getFirstSelectedOption().getText();
     }
 
-///////////////////////////////
-
     public void selectMultiOptionByValue(String value) {
         Select dayDropdown = new Select(multiSelect);
         dayDropdown.selectByValue(value);
@@ -95,16 +93,13 @@ public class SelectDropdownListPage {
 
     public void clickMultiOptionByValue(String value){
         Actions actions = new Actions(driver);
-
         actions.keyDown(Keys.CONTROL).click(getMultiOptionByValue(value)).keyUp(Keys.CONTROL).build().perform();
     }
-
 
     public String getFirstSelectedOptionsValue() {
         Select dayDropdown = new Select(multiSelect);
         return dayDropdown.getFirstSelectedOption().getAttribute("value");
     }
-
 
     public List<WebElement> getAllSelectedOptions() {
         Select dayDropdown = new Select(multiSelect);
@@ -122,7 +117,6 @@ public class SelectDropdownListPage {
     public String getAllSelectedText() {
         return allSelectedText.getText();
     }
-
 
 }
 

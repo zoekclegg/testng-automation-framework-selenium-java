@@ -35,6 +35,9 @@ public class DemoHomePage {
     @FindBy(linkText="Ajax Form Submit")
     WebElement ajaxFormSubmitLink;
 
+    @FindBy(linkText="JQuery Select dropdown")
+    WebElement jquerySelectDropdownLink;
+
     @FindBy(xpath="//a[contains(text(),'Date pickers') and @class='dropdown-toggle']")
     WebElement datePickersDropdown;
 
@@ -74,6 +77,11 @@ public class DemoHomePage {
     public void clickAjaxFormSubmitLink() {
         inputFormsDropdown.click();
         ajaxFormSubmitLink.click();
+    }
+
+    public void clickJquerySelectDropdownLink() {
+        inputFormsDropdown.click();
+        jquerySelectDropdownLink.click();
     }
 
     public void clickBootstrapDatePickerLink() {
