@@ -6,7 +6,7 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="Test">
         <packages>
-            <package name="tests"/>
+            <package name="tests.*"/>
         </packages>
     </test>
 </suite>

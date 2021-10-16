@@ -1,4 +1,4 @@
-package tests;
+package tests.inputForms;
 
 import base.baseTests;
 import com.aventstack.extentreports.Status;

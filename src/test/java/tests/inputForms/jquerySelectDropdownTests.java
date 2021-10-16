@@ -1,4 +1,4 @@
-package tests;
+package tests.inputForms;
 
 import base.baseTests;
 import com.aventstack.extentreports.Status;
@@ -85,9 +85,9 @@ public class jquerySelectDropdownTests extends baseTests {
     @Test
     public void canSelectTerritory(){
         JQuerySelectDropdownPage jQuerySelectDropdownPage = new JQuerySelectDropdownPage (driver);
-        jQuerySelectDropdownPage.selectTerritory("Puerto Rica");
+        jQuerySelectDropdownPage.selectTerritory("Puerto Rico");
         test.log(Status.PASS, "Territory selected");
-        Assert.assertEquals(jQuerySelectDropdownPage.getTerritorySelection(),"Puerto Rica","Puerto Rica is not " +
+        Assert.assertEquals(jQuerySelectDropdownPage.getTerritorySelection(),"Puerto Rico","Puerto Rico is not " +
                 "selected");
         test.log(Status.PASS, "Selection verified");
     }

@@ -44,6 +44,8 @@ public class DemoHomePage {
     @FindBy(linkText="Bootstrap Date Picker")
     WebElement bootstrapDataPickerLink;
 
+    @FindBy(linkText="JQuery Date Picker")
+    WebElement jqueryDatePickerLink;
 
     public void waitForPopUp(){
         WebDriverWait wait= new WebDriverWait(driver,10);
@@ -87,6 +89,11 @@ public class DemoHomePage {
     public void clickBootstrapDatePickerLink() {
         datePickersDropdown.click();
         bootstrapDataPickerLink.click();
+    }
+
+    public void clickJqueryDatePickerLink() {
+        datePickersDropdown.click();
+        jqueryDatePickerLink.click();
     }
 
 }

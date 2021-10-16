@@ -1,4 +1,4 @@
-package tests;
+package tests.datePickers;
 
 import base.baseTests;
 import com.aventstack.extentreports.Status;
