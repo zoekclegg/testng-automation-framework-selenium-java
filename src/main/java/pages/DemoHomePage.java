@@ -47,6 +47,12 @@ public class DemoHomePage {
     @FindBy(linkText="JQuery Date Picker")
     WebElement jqueryDatePickerLink;
 
+    @FindBy(xpath="//a[contains(text(),'Table') and @class='dropdown-toggle']")
+    WebElement tableDropdown;
+
+    @FindBy(linkText="Table Pagination")
+    WebElement tablePaginationLink;
+
     public void waitForPopUp(){
         WebDriverWait wait= new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(popUpCloseButton));
@@ -96,4 +102,8 @@ public class DemoHomePage {
         jqueryDatePickerLink.click();
     }
 
+    public void clickTablePaginationLink() {
+        tableDropdown.click();
+        tablePaginationLink.click();
+    }
 }

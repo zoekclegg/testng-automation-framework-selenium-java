@@ -55,9 +55,9 @@ public class jqueryDatePickerTests extends baseTests {
         }
         catch(Exception e) {
             test.log(Status.PASS, "Attempted to select From date");
-            Assert.assertEquals(jqueryDataPickerPage.getSelectedFromValue(), "", "From date was picked.");
-            test.log(Status.PASS, "Selected dates verified");
         }
+        Assert.assertEquals(jqueryDataPickerPage.getSelectedFromValue(), "", "From date was picked.");
+        test.log(Status.PASS, "Selected dates verified");
     }
 
     @Test
@@ -72,9 +72,9 @@ public class jqueryDatePickerTests extends baseTests {
         }
         catch(Exception e) {
             test.log(Status.PASS, "Attempted to select To date");
-            Assert.assertEquals(jqueryDataPickerPage.getSelectedToValue(), "", "To date was picked.");
-            test.log(Status.PASS, "Selected dates verified");
         }
+        Assert.assertEquals(jqueryDataPickerPage.getSelectedToValue(), "", "To date was picked.");
+        test.log(Status.PASS, "Selected dates verified");
     }
 
     @Test
@@ -128,9 +128,9 @@ public class jqueryDatePickerTests extends baseTests {
         }
         catch(Exception e) {
             test.log(Status.PASS, "Attempted to click next month");
-            Assert.assertEquals(jqueryDataPickerPage.getSelectedMonthValue(), initialMonth, "Month has changed");
-            test.log(Status.PASS, "Verified unable to select next month");
         }
+        Assert.assertEquals(jqueryDataPickerPage.getSelectedMonthValue(), initialMonth, "Month has changed");
+        test.log(Status.PASS, "Verified unable to select next month");
     }
 
     @Test
@@ -161,9 +161,9 @@ public class jqueryDatePickerTests extends baseTests {
         }
         catch(Exception e) {
             test.log(Status.PASS, "Attempted to click previous month");
-            Assert.assertEquals(jqueryDataPickerPage.getSelectedMonthValue(), initialMonth, "Month has changed");
-            test.log(Status.PASS, "Verified unable to select previous month");
         }
+        Assert.assertEquals(jqueryDataPickerPage.getSelectedMonthValue(), initialMonth, "Month has changed");
+        test.log(Status.PASS, "Verified unable to select previous month");
     }
 
 }
