@@ -95,11 +95,11 @@ public class bootstrapDatePickerTests extends baseTests {
         BootstrapDatePickerPage bootstrapDataPickerPage = new BootstrapDatePickerPage (driver);
         bootstrapDataPickerPage.clickDateField();
         test.log(Status.PASS, "Clicked on Date Field");
-        bootstrapDataPickerPage.clickCalendarDay(todayDate - 1);
+        bootstrapDataPickerPage.clickCalendarDay(1);
         test.log(Status.PASS, "Clicked on past date");
         bootstrapDataPickerPage.clickDateField();
         test.log(Status.PASS, "Clicked on Date Field");
-        Assert.assertTrue(bootstrapDataPickerPage.getCalendarDay(todayDate - 1).getAttribute("class").contains(
+        Assert.assertTrue(bootstrapDataPickerPage.getCalendarDay(1).getAttribute("class").contains(
                 "active"),
                 "Past date doesn't contain 'active' class");
         test.log(Status.PASS, "Verified Past date is active");

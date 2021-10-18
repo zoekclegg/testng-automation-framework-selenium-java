@@ -53,6 +53,9 @@ public class DemoHomePage {
     @FindBy(linkText="Table Pagination")
     WebElement tablePaginationLink;
 
+    @FindBy(linkText="Table Data Search")
+    WebElement tableDataSearchLink;
+
     public void waitForPopUp(){
         WebDriverWait wait= new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(popUpCloseButton));
@@ -105,5 +108,10 @@ public class DemoHomePage {
     public void clickTablePaginationLink() {
         tableDropdown.click();
         tablePaginationLink.click();
+    }
+
+    public void clickTableDataSearchLink() {
+        tableDropdown.click();
+        tableDataSearchLink.click();
     }
 }
