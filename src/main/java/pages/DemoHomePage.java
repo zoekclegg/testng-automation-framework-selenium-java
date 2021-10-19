@@ -56,6 +56,9 @@ public class DemoHomePage {
     @FindBy(linkText="Table Data Search")
     WebElement tableDataSearchLink;
 
+    @FindBy(linkText="Table Filter")
+    WebElement tableFilterLink;
+
     public void waitForPopUp(){
         WebDriverWait wait= new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(popUpCloseButton));
@@ -113,5 +116,10 @@ public class DemoHomePage {
     public void clickTableDataSearchLink() {
         tableDropdown.click();
         tableDataSearchLink.click();
+    }
+
+    public void clickTableFilterLink() {
+        tableDropdown.click();
+        tableFilterLink.click();
     }
 }
