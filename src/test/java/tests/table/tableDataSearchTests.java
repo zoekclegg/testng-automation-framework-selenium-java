@@ -13,7 +13,7 @@ public class tableDataSearchTests extends baseTests {
     @BeforeMethod
     public void openJqueryDataPickerPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickTableDataSearchLink();
+        homePage.clickDropdownLink("Table", "Table Data Search");
         test.log(Status.PASS, "Opened Table Data Search page");
     }
 

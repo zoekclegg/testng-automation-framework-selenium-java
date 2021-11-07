@@ -14,7 +14,7 @@ public class tablePaginationTests extends baseTests {
     @BeforeMethod
     public void openJqueryDataPickerPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickTablePaginationLink();
+        homePage.clickDropdownLink("Table", "Table Pagination");
         test.log(Status.PASS, "Opened Table Pagination page");
     }
 

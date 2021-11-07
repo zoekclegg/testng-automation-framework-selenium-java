@@ -13,7 +13,7 @@ public class jqueryDatePickerTests extends baseTests {
     @BeforeMethod
     public void openJqueryDataPickerPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickJqueryDatePickerLink();
+        homePage.clickDropdownLink("Date pickers", "JQuery Date Picker");
         test.log(Status.PASS, "Opened JQuery Date Picker page");
     }
 

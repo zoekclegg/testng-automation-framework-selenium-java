@@ -15,7 +15,7 @@ public class jquerySelectDropdownTests extends baseTests {
     @BeforeMethod
     public void openJquerySelectPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickJquerySelectDropdownLink();
+        homePage.clickDropdownLink("Input Forms", "JQuery Select dropdown");
         test.log(Status.PASS, "Opened JQuery Select Dropdown page");
     }
 

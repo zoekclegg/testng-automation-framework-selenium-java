@@ -13,7 +13,7 @@ public class simpleFormDemoTests extends baseTests {
     @BeforeMethod
     public void openSimpleFormDemoPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickSimpleFormDemoDropdownLink();
+        homePage.clickDropdownLink("Input Forms", "Simple Form Demo");
         test.log(Status.PASS, "Navigated to Simple Form Demo page");
     }
 

@@ -15,7 +15,7 @@ public class radioButtonsDemoTests extends baseTests {
     @BeforeMethod
     public void openRadioButtonsDemoPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickRadioButtonsDemoDropdownLink();
+        homePage.clickDropdownLink("Input Forms", "Radio Buttons Demo");
         test.log(Status.PASS, "Navigated to Radio Buttons Demo page");
     }
 

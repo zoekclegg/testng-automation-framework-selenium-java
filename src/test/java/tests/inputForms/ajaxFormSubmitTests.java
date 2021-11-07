@@ -14,7 +14,7 @@ public class ajaxFormSubmitTests extends baseTests {
     @BeforeMethod
     public void openAjaxFormSubmitPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickAjaxFormSubmitLink();
+        homePage.clickDropdownLink("Input Forms", "Ajax Form Submit");
         test.log(Status.PASS, "Opened Ajax Form Submit page");
     }
 

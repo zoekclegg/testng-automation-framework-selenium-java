@@ -35,3 +35,10 @@ I got into the habit of designing my tests as I
 Early on in the project I made the mistake of not verifying my xpaths when creating some of my 
    page elements. I then copied and pasted these xpaths and adjusted them for other elements. I didn't discover my 
    xpaths were incorrect until I tried running my tests. ChroPath and the browser console are your friends!
+
+**3. More test cases doesn't equal better.**
+
+Whilst there are benefits to granular test cases, the speed and maintainability of an automated test suite is very 
+important. The time spent setting up and tearing down tests adds up quickly and the more tests you have also means 
+there's more code to maintain. So, it's okay to include multiple related checks within one test - within reason of 
+course and assuming there is adequate logging.

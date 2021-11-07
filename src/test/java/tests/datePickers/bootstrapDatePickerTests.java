@@ -22,7 +22,7 @@ public class bootstrapDatePickerTests extends baseTests {
     @BeforeMethod
     public void openBootstrapDataPickerPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickBootstrapDatePickerLink();
+        homePage.clickDropdownLink("Date pickers", "Bootstrap Date Picker");
         test.log(Status.PASS, "Opened Bootstrap Date Picker page");
     }
 

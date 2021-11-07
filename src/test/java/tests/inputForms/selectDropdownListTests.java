@@ -11,9 +11,9 @@ import pages.inputForms.SelectDropdownListPage;
 public class selectDropdownListTests extends baseTests {
 
     @BeforeMethod
-    public void openRadioButtonsDemoPage(){
+    public void openSelectDropdownListPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickSelectDropDownListLink();
+        homePage.clickDropdownLink("Input Forms", "Select Dropdown List");
         test.log(Status.PASS, "Navigated to Select Dropdown List page");
     }
 

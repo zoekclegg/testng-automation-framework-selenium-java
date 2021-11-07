@@ -14,7 +14,7 @@ public class tableFilterTests extends baseTests {
     @BeforeMethod
     public void openTableFilterPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickTableFilterLink();
+        homePage.clickDropdownLink("Table", "Table Filter");
         test.log(Status.PASS, "Opened Table Filter page");
     }
 

@@ -13,7 +13,7 @@ public class checkboxDemoTests extends baseTests {
     @BeforeMethod
     public void openCheckboxDemoPage(){
         DemoHomePage homePage = new DemoHomePage(driver);
-        homePage.clickCheckboxDemoDropdownLink();
+        homePage.clickDropdownLink("Input Forms", "Checkbox Demo");
         test.log(Status.PASS, "Opened Checkbox Demo page");
     }
 

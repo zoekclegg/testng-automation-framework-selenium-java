@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
@@ -59,6 +60,9 @@ public class DemoHomePage {
     @FindBy(linkText="Table Filter")
     WebElement tableFilterLink;
 
+    @FindBy(linkText="Table Sort & Search")
+    WebElement tableSortAndSearchLink;
+
     public void waitForPopUp(){
         WebDriverWait wait= new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(popUpCloseButton));
@@ -66,6 +70,11 @@ public class DemoHomePage {
 
     public void closePopUp() {
         popUpCloseButton.click();
+    }
+
+    public void clickDropdownLink(String menuText, String linkText) {
+        driver.findElement(By.xpath("//a[contains(text(),'" + menuText + "') and @class='dropdown-toggle']")).click();
+        driver.findElement(By.linkText(linkText)).click();
     }
 
     public void clickSimpleFormDemoDropdownLink() {
@@ -121,5 +130,10 @@ public class DemoHomePage {
     public void clickTableFilterLink() {
         tableDropdown.click();
         tableFilterLink.click();
+    }
+
+    public void clickTableSortAndSearchLink() {
+        tableDropdown.click();
+        tableSortAndSearchLink.click();
     }
 }
